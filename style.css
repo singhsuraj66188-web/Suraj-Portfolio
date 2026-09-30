@@ -1487,3 +1487,60 @@ footer {
         margin-left: 0;
     }
 }
+/* =========================
+   PROFILE PHOTO
+========================= */
+
+.profile-card {
+    overflow: hidden;
+}
+
+.profile-image-wrapper {
+    width: 100%;
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.profile-image {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: 430px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 0 35px rgba(0, 229, 160, 0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-card:hover .profile-image {
+    transform: scale(1.02);
+    box-shadow: 0 0 45px rgba(0, 229, 160, 0.2);
+}
+
+@media (max-width: 900px) {
+    .profile-image-wrapper {
+        min-height: auto;
+    }
+
+    .profile-image {
+        height: 400px;
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-image-wrapper {
+        padding: 12px;
+    }
+
+    .profile-image {
+        height: 350px;
+        max-width: 100%;
+    }
+}
